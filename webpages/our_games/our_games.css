@@ -1,0 +1,235 @@
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .25s ease-in-out;
+    cursor: default;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+    background-color: rgb(0, 71, 0);
+}
+
+.backCover {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    backdrop-filter: blur(110px);
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+.backVdo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+/* -------------------------- */
+.container {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.wrapper {
+    scroll-snap-align: start;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.wrapper .gamePlay {
+    position: absolute;
+    box-shadow: 10px 5px 20px rgb(24, 24, 24);
+    height: 300px;
+    top: 35%;
+    left: 58%;
+    z-index: 2;
+}
+
+.wrapper img{
+    position: absolute;
+    box-shadow: 10px 5px 15px rgb(54, 54, 54);
+    left: 50%;
+    z-index: 5;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    z-index: 3;
+}
+
+.wrapper .snakeWallpaper {
+    width: 200px;
+    top: 10%;
+}
+.wrapper .tic_tac_toe_wallpaper {
+    width: 250px;
+    top: 25%;
+}
+.wrapper .sudokuWallpaper {
+    width: 300px;
+    top: 20%;
+}
+.wrapper .picrossWallpaper {
+    width: 300px;
+    top: 25%;
+}
+
+.wrapper .jigsawWallpaper {
+    width: 250px;
+    top: 20%;
+}
+
+.wrapper .content {
+    position: absolute;
+    top: 15%;
+    left: 50px;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.wrapper h2 {
+    padding: 30px 50px;
+    font-size: 36px;
+    width: 20ch;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    color: orange;
+}
+
+.wrapper h2:hover {
+    color: orangered;
+    transform: translate(35px, -9px);
+    scale: 1.2;
+}
+.wrapper p {
+    width: 55ch;
+    padding-left: 50px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    transition: all .15s;
+}
+
+.wrapper button {
+    margin: 0 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: 5px solid rgb(53, 186, 238);
+    background-color: transparent;
+    color: rgb(48, 196, 255);
+    letter-spacing: 4px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.wrapper button:hover {
+    background-color: #205030;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+@media (width <= 501px) {
+    .wrapper {
+        padding: 3vw;
+    }
+
+    .wrapper .content {
+        position: static;
+    }
+    
+    .content h2 {
+        position: absolute;
+        top: 6%;
+        width: 60%;
+        padding-left: 30px;
+        font-size: 25px;
+        left: 0px;
+    }
+    
+    .content p {
+        width: calc(100% - 20vw);
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper img{
+        right: 60px;
+        left: auto;
+        background-color: #ffffff2a;
+        box-shadow: 10px 10px 10px #27272786;
+    }
+    .wrapper .snakeWallpaper {
+        width: 100px;
+        height: 150px;
+        top: 50px;
+    }
+    .wrapper .tic_tac_toe_wallpaper {
+        width: 125px;
+        top: 60px;
+    }
+    .wrapper .sudokuWallpaper {
+        width: 125px;
+        top: 60px;
+    }
+    .wrapper .picrossWallpaper {
+        width: 150px;
+        top: 70px;
+        right: 10px;
+    }
+    
+    .wrapper .jigsawWallpaper {
+        width: 100px;
+        top: 80px;
+    }
+    
+    .wrapper .gamePlay {
+        width: calc(100% - 20vw);
+        height: auto;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        margin: 0;
+    }
+    
+    .wrapper button {
+        bottom: 120px;
+        width: calc(100% - 20vw);
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+}

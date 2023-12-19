@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
 }
 
 body {
@@ -49,7 +50,7 @@ from{
 }
 }
 
-.team span:nth-child(2):after {
+.team .U:after {
 content: '';
 display: block;
 position: absolute;
@@ -197,7 +198,7 @@ color: rgb(195, 0, 255);
   .team span {
     width: 100px;
   }
-
+  
   .team p {
     font-size: 1rem;
     position: absolute;
@@ -208,4 +209,15 @@ color: rgb(195, 0, 255);
     .team span a {
     font-size: .8rem;
     }
+}
+
+.U:hover > h1{
+  transform: rotateZ(180deg)
+  translateX(15px);
+  transition: all 0.5s ease-in-out;
+}
+
+.U:hover:after {
+  background-color: orangered;
+  transition: all 0.5s ease-in-out;
 }

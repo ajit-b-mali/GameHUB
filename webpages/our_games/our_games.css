@@ -76,6 +76,18 @@ body {
     z-index: 3;
 }
 
+.wrapper .pingPongWallpaper {
+    width: 200px;
+    top: 15%;
+}
+.wrapper .redBlueWallpaper {
+    width: 150px;
+    top: 25%;
+}
+.wrapper .breakOutWallpaper {
+    width: 200px;
+    top: 20%;
+}
 .wrapper .snakeWallpaper {
     width: 200px;
     top: 10%;
